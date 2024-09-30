@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Академия Плюс</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="header__links-block">
+          <a href="#" class="header__link">Поиск запчастей</a>
+          <a href="#" class="header__link">Оплата и доставка</a>
+          <a href="#" class="header__link">Вопросы и ответы</a>
+          <a href="#" class="header__link">О компании</a>
+          <a href="#" class="header__link">Новости</a>
+          <a href="#" class="header__link">Контакты</a>
+          <div class="header__select-cntr select">
+            <svg
+              id="svgIcon_headerSelect"
+              width="22"
+              height="20"
+              viewBox="0 0 22 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.2148 11.25C10.5659 11.25 9.93148 11.0667 9.39188 10.7233C8.85228 10.38 8.43172 9.89191 8.18337 9.32089C7.93502 8.74987 7.87004 8.12154 7.99664 7.51534C8.12325 6.90915 8.43576 6.35233 8.89465 5.91529C9.35354 5.47825 9.93821 5.18063 10.5747 5.06005C11.2112 4.93947 11.871 5.00135 12.4705 5.23788C13.0701 5.4744 13.5826 5.87494 13.9431 6.38884C14.3037 6.90275 14.4961 7.50694 14.4961 8.125C14.4951 8.9535 14.149 9.74778 13.5339 10.3336C12.9188 10.9195 12.0848 11.249 11.2148 11.25ZM11.2148 6.25C10.8255 6.25 10.4448 6.35997 10.1211 6.566C9.79731 6.77202 9.54497 7.06486 9.39596 7.40747C9.24695 7.75008 9.20796 8.12708 9.28392 8.4908C9.35989 8.85451 9.54739 9.1886 9.82273 9.45083C10.0981 9.71305 10.4489 9.89163 10.8308 9.96397C11.2127 10.0363 11.6085 9.99919 11.9683 9.85728C12.328 9.71536 12.6355 9.47504 12.8518 9.1667C13.0681 8.85835 13.1836 8.49584 13.1836 8.125C13.1831 7.62787 12.9755 7.15125 12.6064 6.79972C12.2373 6.4482 11.7368 6.2505 11.2148 6.25Z"
+                fill="black"
+              />
+              <path
+                d="M11.2149 18.75L5.67873 12.5319C5.6018 12.4385 5.52567 12.3445 5.45035 12.25C4.50468 11.0636 3.99381 9.61452 3.9961 8.125C3.9961 6.30164 4.75665 4.55295 6.11042 3.26364C7.4642 1.97433 9.30032 1.25 11.2149 1.25C13.1294 1.25 14.9655 1.97433 16.3193 3.26364C17.6731 4.55295 18.4336 6.30164 18.4336 8.125C18.4359 9.61384 17.9253 11.0623 16.98 12.2481L16.9794 12.25C16.9794 12.25 16.7825 12.4963 16.7529 12.5294L11.2149 18.75ZM6.49838 11.4969C6.49838 11.4969 6.65129 11.6894 6.68607 11.7306L11.2149 16.8175L15.7495 11.7237C15.7784 11.6894 15.932 11.4956 15.9326 11.495C16.7051 10.5257 17.1226 9.34189 17.1211 8.125C17.1211 6.63316 16.4988 5.20242 15.3912 4.14752C14.2836 3.09263 12.7813 2.5 11.2149 2.5C9.64842 2.5 8.14614 3.09263 7.0385 4.14752C5.93087 5.20242 5.3086 6.63316 5.3086 8.125C5.30722 9.34265 5.72517 10.5271 6.49838 11.4969Z"
+                fill="black"
+              />
+            </svg>
+            <select type="select" class="header__select">
+              <option value="Moscow">Москва</option>
+              <option value="Sochi">Сочи</option>
+              <option value="Adler">Адлер</option>
+            </select>
+          </div>
+          <a href="tel:+74955404044" class="header__link link_phone">
+            <img src="/img/svg/phineSvg.svg" alt="phineSvg" />
+            <span>+7 (495) 540-40-44</span>
+          </a>
+        </nav>
+        <div class="brg-menu_overlay"></div>
+        <button class="burger-menu__button">
+          <span class="burger-menu__icon"></span>
+        </button>
+        <nav class="header__input-logo_block">
+          <a href="#" class="header__logo logo">LOGO</a>
+          <aside class="header__input-cntr">
+            <div class="header__input-tab_btns">
+              <button id="tab__btn1" class="tab_btn">Поиск по VIN</button>
+              <button id="tab__btn2" class="tab_btn">
+                Поиск по коду детали
+              </button>
+            </div>
+            <div class="header__input-tab-block">
+              <div class="header__input-tab-cntnt" id="header_tab-1">
+                <div class="header__input-input_cntr">
+                  <input
+                    type="text"
+                    value="Введите не менее 3 символов"
+                    id="tab_input-1"
+                    class="tab_input"
+                  />
+                  <label for="tab_input-1">
+                    <svg
+                      class="tab_input__searchCsg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.8757 20.875L16.2027 16.1938L20.8757 20.875ZM18.7923 9.93754C18.7923 12.2858 17.8595 14.5379 16.199 16.1984C14.5385 17.8589 12.2864 18.7917 9.93815 18.7917C7.58988 18.7917 5.33779 17.8589 3.67731 16.1984C2.01683 14.5379 1.08398 12.2858 1.08398 9.93754C1.08398 7.58927 2.01683 5.33718 3.67731 3.6767C5.33779 2.01622 7.58988 1.08337 9.93815 1.08337C12.2864 1.08337 14.5385 2.01622 16.199 3.6767C17.8595 5.33718 18.7923 7.58927 18.7923 9.93754V9.93754Z"
+                        stroke="#A3224A"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <button class="search__button button">найти</button>
+              </div>
+              <div class="header__input-tab-cntnt" id="header_tab-2">
+                <div class="header__input-input_cntr">
+                  <input
+                    type="text"
+                    value="Введите не менее 3 символов Proverka"
+                    id="tab_input-1"
+                    class="tab_input"
+                  />
+                  <label for="tab_input-1">
+                    <svg
+                      class="tab_input__searchCsg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.8757 20.875L16.2027 16.1938L20.8757 20.875ZM18.7923 9.93754C18.7923 12.2858 17.8595 14.5379 16.199 16.1984C14.5385 17.8589 12.2864 18.7917 9.93815 18.7917C7.58988 18.7917 5.33779 17.8589 3.67731 16.1984C2.01683 14.5379 1.08398 12.2858 1.08398 9.93754C1.08398 7.58927 2.01683 5.33718 3.67731 3.6767C5.33779 2.01622 7.58988 1.08337 9.93815 1.08337C12.2864 1.08337 14.5385 2.01622 16.199 3.6767C17.8595 5.33718 18.7923 7.58927 18.7923 9.93754V9.93754Z"
+                        stroke="#A3224A"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+                <button class="search__button button">найти</button>
+              </div>
+            </div>
+          </aside>
+          <div class="header__cart-acc-block">
+            <a href="#" class="header__cart">
+              <svg
+                width="28"
+                height="30"
+                viewBox="0 0 28 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.7724 8.32034C27.6921 8.19821 27.5857 8.09853 27.4619 8.02969C27.3382 7.96085 27.2009 7.92487 27.0615 7.92478H8.49137L7.08568 2.73103C6.53443 0.685869 5.22453 0.465088 4.68728 0.465088H0.939215C0.458812 0.465088 0.0703125 0.881807 0.0703125 1.39603C0.0703125 1.91024 0.45925 2.32693 0.939187 2.32693H4.68681C4.80537 2.32693 5.16719 2.32693 5.41396 3.24053L10.2497 22.2816C10.3547 22.6833 10.6963 22.9608 11.0861 22.9608H22.8977C23.2644 22.9608 23.5916 22.7147 23.7155 22.3449L27.8787 9.17065C27.9745 8.88519 27.9347 8.56737 27.7724 8.32034H27.7724ZM22.2863 21.0995H11.7456L8.97975 9.78712H25.8261L22.2863 21.0995ZM20.563 24.8476C19.3546 24.8476 18.3755 25.8966 18.3755 27.1913C18.3755 28.486 19.3546 29.5351 20.563 29.5351C21.7714 29.5351 22.7505 28.486 22.7505 27.1913C22.7505 25.8966 21.7714 24.8476 20.563 24.8476ZM12.688 24.8476C11.4796 24.8476 10.5005 25.8966 10.5005 27.1913C10.5005 28.486 11.4796 29.5351 12.688 29.5351C13.8964 29.5351 14.8755 28.486 14.8755 27.1913C14.8755 25.8966 13.8964 24.8476 12.688 24.8476Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+            <a href="#" class="header__acc">
+              <svg
+                width="26"
+                height="28"
+                viewBox="0 0 26 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 14C14.7239 14 16.3772 13.2888 17.5962 12.023C18.8152 10.7571 19.5 9.04021 19.5 7.25C19.5 5.45979 18.8152 3.7429 17.5962 2.47703C16.3772 1.21116 14.7239 0.5 13 0.5C11.2761 0.5 9.62279 1.21116 8.40381 2.47703C7.18482 3.7429 6.5 5.45979 6.5 7.25C6.5 9.04021 7.18482 10.7571 8.40381 12.023C9.62279 13.2888 11.2761 14 13 14ZM17.3333 7.25C17.3333 8.44347 16.8768 9.58807 16.0641 10.432C15.2515 11.2759 14.1493 11.75 13 11.75C11.8507 11.75 10.7485 11.2759 9.93587 10.432C9.12321 9.58807 8.66667 8.44347 8.66667 7.25C8.66667 6.05653 9.12321 4.91193 9.93587 4.06802C10.7485 3.22411 11.8507 2.75 13 2.75C14.1493 2.75 15.2515 3.22411 16.0641 4.06802C16.8768 4.91193 17.3333 6.05653 17.3333 7.25ZM26 25.25C26 27.5 23.8333 27.5 23.8333 27.5H2.16667C2.16667 27.5 0 27.5 0 25.25C0 23 2.16667 16.25 13 16.25C23.8333 16.25 26 23 26 25.25ZM23.8333 25.241C23.8312 24.6875 23.4997 23.0225 22.0307 21.497C20.618 20.03 17.9595 18.5 13 18.5C8.0405 18.5 5.382 20.03 3.96933 21.497C2.50033 23.0225 2.171 24.6875 2.16667 25.241H23.8333Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main catalog-tools-TO-8">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="/" class="breadcrumb-link_home">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 16V7.5C17 7.34475 16.9639 7.19164 16.8944 7.05279C16.825 6.91393 16.7242 6.79315 16.6 6.7L9.6 1.45C9.4269 1.32018 9.21637 1.25 9 1.25C8.78363 1.25 8.5731 1.32018 8.4 1.45L1.4 6.7C1.2758 6.79315 1.175 6.91393 1.10557 7.05279C1.03614 7.19164 1 7.34475 1 7.5V16C1 16.2652 1.10536 16.5196 1.29289 16.7071C1.48043 16.8946 1.73478 17 2 17H6C6.26522 17 6.51957 16.8946 6.70711 16.7071C6.89464 16.5196 7 16.2652 7 16V13C7 12.7348 7.10536 12.4804 7.29289 12.2929C7.48043 12.1054 7.73478 12 8 12H10C10.2652 12 10.5196 12.1054 10.7071 12.2929C10.8946 12.4804 11 12.7348 11 13V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17H16C16.2652 17 16.5196 16.8946 16.7071 16.7071C16.8946 16.5196 17 16.2652 17 16Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <span>Каталог товаров для Техобслуживания (ТО)</span>
+            </li>
+          </ol>
+        </nav>
+
+        <section class="alphabet-car-marks_sect CT-TO-8">
+          <h2 class="head_title">Каталог товаров для Техобслуживания (ТО)</h2>
+          <div class="CT-TO-8_descr">
+            <p>Выберите марку своего автомобиля:</p>
+          </div>
+          <ul class="alphabet-car-marks-cntr">
+            <li>
+              <h5>a</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">ACURA</a>
+                <a href="#" class="ACM-link">ALFA ROMEO</a>
+                <a href="#" class="ACM-link">AUDI</a>
+              </div>
+            </li>
+            <li>
+              <h5>b</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">BMW</a>
+                <a href="#" class="ACM-link">BUICK</a>
+              </div>
+            </li>
+            <li>
+              <h5>c</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">CADILLAC</a>
+                <a href="#" class="ACM-link">CHEVROLET</a>
+                <a href="#" class="ACM-link">CHEVROLET EU</a>
+                <a href="#" class="ACM-link">CHRYSLER</a>
+                <a href="#" class="ACM-link">CITROEN</a>
+              </div>
+            </li>
+            <li>
+              <h5>d</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">DACIA</a>
+                <a href="#" class="ACM-link">DODGE</a>
+              </div>
+            </li>
+            <li>
+              <h5>e</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">eagle</a>
+              </div>
+            </li>
+            <li>
+              <h5>c</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">CADILLAC</a>
+                <a href="#" class="ACM-link">CHEVROLET</a>
+                <a href="#" class="ACM-link">CHEVROLET EU</a>
+                <a href="#" class="ACM-link">CHRYSLER</a>
+                <a href="#" class="ACM-link">CITROEN</a>
+              </div>
+            </li>
+            <li>
+              <h5>d</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">DACIA</a>
+                <a href="#" class="ACM-link">DODGE</a>
+              </div>
+            </li>
+            <li>
+              <h5>e</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">eagle</a>
+              </div>
+            </li>
+            <li>
+              <h5>c</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">CADILLAC</a>
+                <a href="#" class="ACM-link">CHEVROLET</a>
+                <a href="#" class="ACM-link">CHEVROLET EU</a>
+                <a href="#" class="ACM-link">CHRYSLER</a>
+                <a href="#" class="ACM-link">CITROEN</a>
+              </div>
+            </li>
+            <li>
+              <h5>d</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">DACIA</a>
+                <a href="#" class="ACM-link">DODGE</a>
+              </div>
+            </li>
+            <li>
+              <h5>e</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">eagle</a>
+              </div>
+            </li>
+            <li>
+              <h5>c</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">CADILLAC</a>
+                <a href="#" class="ACM-link">CHEVROLET</a>
+                <a href="#" class="ACM-link">CHEVROLET EU</a>
+                <a href="#" class="ACM-link">CHRYSLER</a>
+                <a href="#" class="ACM-link">CITROEN</a>
+              </div>
+            </li>
+            <li>
+              <h5>d</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">DACIA</a>
+                <a href="#" class="ACM-link">DODGE</a>
+              </div>
+            </li>
+            <li>
+              <h5>e</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">eagle</a>
+              </div>
+            </li>
+            <li>
+              <h5>c</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">CADILLAC</a>
+                <a href="#" class="ACM-link">CHEVROLET</a>
+                <a href="#" class="ACM-link">CHEVROLET EU</a>
+                <a href="#" class="ACM-link">CHRYSLER</a>
+                <a href="#" class="ACM-link">CITROEN</a>
+              </div>
+            </li>
+            <li>
+              <h5>d</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">DACIA</a>
+                <a href="#" class="ACM-link">DODGE</a>
+              </div>
+            </li>
+            <li>
+              <h5>e</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">eagle</a>
+              </div>
+            </li>
+            <li>
+              <h5>c</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">CADILLAC</a>
+                <a href="#" class="ACM-link">CHEVROLET</a>
+                <a href="#" class="ACM-link">CHEVROLET EU</a>
+                <a href="#" class="ACM-link">CHRYSLER</a>
+                <a href="#" class="ACM-link">CITROEN</a>
+              </div>
+            </li>
+            <li>
+              <h5>d</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">DACIA</a>
+                <a href="#" class="ACM-link">DODGE</a>
+              </div>
+            </li>
+            <li>
+              <h5>e</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">eagle</a>
+              </div>
+            </li>
+            <li>
+              <h5>c</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">CADILLAC</a>
+                <a href="#" class="ACM-link">CHEVROLET</a>
+                <a href="#" class="ACM-link">CHEVROLET EU</a>
+                <a href="#" class="ACM-link">CHRYSLER</a>
+                <a href="#" class="ACM-link">CITROEN</a>
+              </div>
+            </li>
+            <li>
+              <h5>d</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">DACIA</a>
+                <a href="#" class="ACM-link">DODGE</a>
+              </div>
+            </li>
+            <li>
+              <h5>e</h5>
+              <div class="ACM-links_block">
+                <a href="#" class="ACM-link">eagle</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <nav class="footer_nav-links-block">
+          <ul class="footer_nav-links_item">
+            <li>
+              <h5>Запчасти</h5>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">
+                Оригинальный каталог запчастей
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link"> Общий каталог запчастей</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link"> Каталог запчастей ТО</a>
+            </li>
+          </ul>
+          <ul class="footer_nav-links_item">
+            <li>
+              <h5>Каталог</h5>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Автопринадлежности</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Автоэлектроника</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Масла и автохимия</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Шины и диски</a>
+            </li>
+          </ul>
+          <ul class="footer_nav-links_item">
+            <li>
+              <h5>КОМПАНИЯ</h5>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Контакты</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">О компании</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Партнеры</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Новости</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Отзывы</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Вопросы и ответы</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link">Оплата и доставка</a>
+            </li>
+          </ul>
+          <ul class="footer_nav-links_item">
+            <li>
+              <a href="#" class="footer__logo logo">LOGO</a>
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link"
+                >г. Москва, Проспект Мира, д.89</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link"
+                >г. Москва, ул. Народного Ополчения д.21, к.1</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer_nav-link"
+                >г. Москва, ул. Шоссе Энтузиастов, 54</a
+              >
+            </li>
+            <li>
+              <a href="tel:+74955404044" class="footer_nav-link link_phone">
+                <span>Служба доставки: +7 (495) 540-40-44</span>
+              </a>
+            </li>
+            <li class="footer-inline_SM">
+              <h6>МЫ В СЕТИ:</h6>
+              <div class="footer__SM-links_block">
+                <a href="#" class="footer__SM-link">
+                  <svg
+                    width="19"
+                    height="20"
+                    viewBox="0 0 19 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.3151 1.2168H1.68609C1.15077 1.2168 0.716797 1.65077 0.716797 2.18609V17.8151C0.716797 18.3504 1.15077 18.7844 1.68609 18.7844H17.3151C17.8504 18.7844 18.2844 18.3504 18.2844 17.8151V2.18609C18.2844 1.65077 17.8504 1.2168 17.3151 1.2168Z"
+                      fill="#3D5A98"
+                    />
+                    <path
+                      d="M12.8366 18.7829V11.98H15.1196L15.461 9.32892H12.8366V7.63673C12.8366 6.86931 13.0504 6.34532 14.1503 6.34532H15.5545V3.97032C14.8745 3.89959 14.1912 3.86589 13.5076 3.86939C11.4859 3.86939 10.0935 5.10142 10.0935 7.374V9.32892H7.81055V11.98H10.0935V18.7829H12.8366Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="footer__SM-link">
+                  <img src="/img/svg/odnokSvg.png" alt="odnokSvg" />
+                </a>
+                <a href="#" class="footer__SM-link"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.2075 1.5825C2.28484e-07 2.8015 0 4.75075 0 8.655V9.345C0 13.2435 2.28484e-07 15.1927 1.2075 16.4175C2.4265 17.625 4.37575 17.625 8.28 17.625H8.97C12.8685 17.625 14.8177 17.625 16.0425 16.4175C17.25 15.1985 17.25 13.2492 17.25 9.345V8.655C17.25 4.7565 17.25 2.80725 16.0425 1.5825C14.8235 0.375 12.8742 0.375 8.97 0.375H8.28C4.3815 0.375 2.43225 0.375 1.2075 1.5825ZM2.9095 5.62475H4.8875C4.95075 8.91375 6.39975 10.3052 7.54975 10.5927V5.62475H9.407V8.4595C10.5397 8.33875 11.7358 7.045 12.1383 5.619H13.9897C13.8388 6.35719 13.5373 7.05631 13.104 7.67268C12.6706 8.28905 12.1148 8.80941 11.4713 9.20125C12.1895 9.55858 12.8237 10.0642 13.3322 10.6846C13.8406 11.3051 14.2117 12.0263 14.421 12.8007H12.3797C11.9427 11.438 10.8502 10.38 9.407 10.2362V12.8007H9.177C5.244 12.8007 3.0015 10.1097 2.9095 5.62475Z"
+                      fill="black"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+
+      <footer class="footer__policy-conf">
+        <p>
+          Copyright 2004-2024 © autozap.ru - «Академия Плюс» запчасти и
+          аксессуары для американских, японских, корейских и европейских
+          автомобилей, мотоциклов и спецтехники ООО "Универсалавто", ИНН/КПП
+          7725326080/772501001. Данный сайт использует cookie. Ознакомьтесь
+          с условиями конфиденциальности.
+        </p>
+      </footer>
+      <script type="module" src="/js/main.js"></script>
+    </div>
+  </body>
+</html>

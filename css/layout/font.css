@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "MontserratRegular";
+  src: url("/fonts/MontserratRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "helvetica_regular";
+  src: url("/fonts/helvetica_regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("/fonts/Inter-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSansHebrew-Regular";
+  src: url("/fonts/OpenSansHebrew-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
